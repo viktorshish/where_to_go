@@ -14,7 +14,7 @@ class Place(models.Model):
 
 class Image(models.Model):
     place = models.ForeignKey(Place, on_delete=models.CASCADE, related_name='images', verbose_name='Место')
-    image = models.ImageField(verbose_name='Изображение', upload_to='images')
+    image = models.ImageField(verbose_name='Изображение')
     position_number = models.IntegerField(verbose_name='Порядковый номер')
 
     def __str__(self):
